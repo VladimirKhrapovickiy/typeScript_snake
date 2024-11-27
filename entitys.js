@@ -201,7 +201,6 @@ export let snake = {
 export let food = {
     location: [],
     checkFood(sankeHeadLocation) {
-        console.log(this.location); //// проверка на то что змея съела еду
         return sankeHeadLocation[0] === this.location[0] && sankeHeadLocation[1] === this.location[1];
     },
     checkLocation(coordsToCheck, x, y) {
