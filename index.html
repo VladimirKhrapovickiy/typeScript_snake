@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My ts palayground</title>
+    <audio id="mus" src="./jeremy-blake-powerup.mp3"></audio>
+</head>
+<body>
+    <div class="layout" >
+        <header class="header">
+            <button class="btn-neon" id="btn_start"><span>Start</span><span>New Game</span></button>
+            <nav class="difficulty">
+                <ul  class="difficulty__list">
+                    <button class="btn-neon" id="btn_dif_easy"><span class="btn-neon_inner color-pink">For Puss</span><span class="btn-neon_inner color-pink">Easy</span></button>
+                    <button class="btn-neon" id="btn_dif_medium"><span class="btn-neon_inner">Ok</span><span class="btn-neon_inner">Medium</span></button>
+                    <button class="btn-neon" id="btn_dif_hard"><span class="btn-neon_inner">Real man</span><span class="btn-neon_inner">Hard</span></button>
+                </ul>
+              </nav>
+        </header>
+        <main class="main">
+            <div class="game_container">
+                
+            </div>
+        </main>
+    </div>
+    <script>var exports={};</script>
+    <script type="module" src="./index.js"></script>
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script> 
+    const difficultyList = document.querySelectorAll(".difficulty__name");
+    difficultyList.forEach((el)=> {
+        el.addEventListener("click",()=>{
+        difficultyList.forEach(el=>{
+        el.classList.remove("active")
+        })
+        el.classList = "active";
+        })
+    })
+    </script>
+</body>
+</html>
