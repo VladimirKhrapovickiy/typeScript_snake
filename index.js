@@ -3,7 +3,7 @@ import { debuffConfuss, snake } from './entitys.js';
 import { food } from './entitys.js';
 import { field } from './entitys.js';
 import { controls } from './controls.js';
-import anime from './node_modules/animejs/lib/anime.es.js';
+import anime from '/node_modules/animejs/lib/anime.es.js';
 import { wall } from './entitys.js';
 import { checkCollision } from './entitys.js';
 controls;
