@@ -19,7 +19,7 @@ export function startGame() {
     snake.createSnake();
     food.createFood(snake.snakeCoords);
     debuffConfuss.createCell(snake.snakeCoords);
-    wallInterval = setInterval(() => { wall.createWall(snake.snakeCoords); console.log('wall'); }, 5000);
+    wallInterval = setInterval(() => { wall.createWall(snake.snakeCoords);}, 5000);
     snakeInterval = setInterval(() => {
         snake.moveSnake(snake);
         if (checkCollision(snake.snakeHeadLocation, [...snake.snakeCoords.slice(0, snake.snakeCoords.length - 2), ...wall.location])) {
